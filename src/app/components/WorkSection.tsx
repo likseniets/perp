@@ -1,123 +1,104 @@
-import { motion } from 'motion/react';
-import { Building2, Calendar, TrendingUp } from 'lucide-react';
+import { motion } from "motion/react";
+import { Building2, ChevronRight } from "lucide-react";
 
-const experiences = [
+const roles = [
   {
-    company: 'Tech Innovators Inc.',
-    position: 'Senior Software Engineer',
-    period: '2022 - Present',
-    location: 'San Francisco, CA',
-    description: 'Leading cloud architecture and team mentorship',
-    achievements: [
-      'Architected systems handling 1M+ daily users',
-      'Reduced infrastructure costs by 40%',
-      'Mentored 8 engineers to senior positions'
+    title: "IT Supporttekniker",
+    period: "20XX – 20XX",
+    focus: "Brukerstøtte og infrastruktur",
+    learned: [
+      "Praktisk feilsøking i et produksjonsmiljø",
+      "Forsto viktigheten av god dokumentasjon",
+      "Ble kjent med ITSM-prosesser fra brukersiden",
     ],
-    image: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&h=400&fit=crop'
   },
   {
-    company: 'Digital Solutions Corp',
-    position: 'Software Engineer',
-    period: '2019 - 2021',
-    location: 'New York, NY',
-    description: 'Full-stack development for enterprise clients',
-    achievements: [
-      'Delivered 15+ client projects on time',
-      'Implemented CI/CD reducing deploy time 60%',
-      'Led migration to microservices architecture'
+    title: "ITSM Systemadministrator",
+    period: "20XX – 20XX",
+    focus: "Administrasjon av ITSM-plattform",
+    learned: [
+      "Konfigurerte og vedlikeholdt ITSM-løsninger",
+      "Automatiserte manuelle prosesser",
+      "Samarbeidet med ulike avdelinger om behov og forbedringer",
     ],
-    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=400&fit=crop'
   },
   {
-    company: 'StartUp Dynamics',
-    position: 'Junior Developer',
-    period: '2018 - 2019',
-    location: 'Austin, TX',
-    description: 'Mobile and web app development',
-    achievements: [
-      'Built features for 50K+ user mobile app',
-      'Improved app performance by 35%',
-      'Collaborated in agile sprints'
+    title: "[Rolle 3 — fyll inn]",
+    period: "20XX – nå",
+    focus: "Ansvar og utvikling",
+    learned: [
+      "Tok mer ansvar og jobbet mer selvstendig",
+      "Kombinerte studie og jobb i praksis",
+      "Lærte å jobbe strukturert med komplekse systemer",
     ],
-    image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=400&fit=crop'
-  }
+  },
 ];
 
 export default function WorkSection() {
   return (
-    <div className="h-full flex items-center justify-center bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 px-8 py-16 overflow-y-auto">
-      <div className="max-w-6xl w-full">
+    <div className="h-full flex items-center justify-center bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 px-8">
+      <div className="max-w-5xl w-full">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="mb-12"
         >
-          <h2 className="text-6xl font-bold text-white mb-4">Work Experience</h2>
-          <p className="text-2xl text-gray-300">My professional journey and impact</p>
+          <div className="flex items-center gap-3 mb-2">
+            <Building2 className="w-8 h-8 text-blue-400" />
+            <h2 className="text-6xl font-bold text-white">Arribatec</h2>
+          </div>
+          <p className="text-gray-400 text-xl">Tre roller — én arbeidsgiver</p>
         </motion.div>
 
-        <div className="space-y-8">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-102"
-            >
-              <div className="grid md:grid-cols-5 gap-6">
-                {/* Image */}
-                <div className="md:col-span-2 relative h-64 md:h-auto">
-                  <img
-                    src={exp.image}
-                    alt={exp.company}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent" />
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical line */}
+          <div className="absolute left-5 top-0 bottom-0 w-px bg-white/10" />
+
+          <div className="space-y-8">
+            {roles.map((role, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+                className="relative flex gap-8"
+              >
+                {/* Dot */}
+                <div className="shrink-0 w-10 h-10 rounded-full bg-blue-500/30 border-2 border-blue-400 flex items-center justify-center z-10">
+                  <span className="text-blue-300 font-bold text-sm">
+                    {index + 1}
+                  </span>
                 </div>
 
-                {/* Content */}
-                <div className="md:col-span-3 p-6 md:p-8">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h3 className="text-3xl font-bold text-white mb-2">{exp.position}</h3>
-                      <div className="flex items-center gap-2 text-blue-300">
-                        <Building2 className="w-5 h-5" />
-                        <span className="text-xl font-semibold">{exp.company}</span>
-                      </div>
-                    </div>
+                {/* Card */}
+                <div className="flex-1 bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                  <div className="flex items-start justify-between mb-1">
+                    <h3 className="text-xl font-bold text-white">
+                      {role.title}
+                    </h3>
+                    <span className="text-gray-500 text-sm shrink-0 ml-4">
+                      {role.period}
+                    </span>
                   </div>
+                  <p className="text-blue-300 text-sm mb-4">{role.focus}</p>
 
-                  <div className="flex items-center gap-4 text-gray-400 mb-4">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>{exp.period}</span>
-                    </div>
-                    <span>•</span>
-                    <span>{exp.location}</span>
-                  </div>
-
-                  <p className="text-gray-300 text-lg mb-4">{exp.description}</p>
-
-                  <div>
-                    <div className="flex items-center gap-2 mb-3">
-                      <TrendingUp className="w-5 h-5 text-green-400" />
-                      <h4 className="font-semibold text-white">Key Impact:</h4>
-                    </div>
-                    <ul className="space-y-2">
-                      {exp.achievements.map((achievement, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <span className="text-blue-400 mt-1">▸</span>
-                          <span className="text-gray-300">{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <ul className="space-y-1">
+                    {role.learned.map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-2 text-gray-300 text-sm"
+                      >
+                        <ChevronRight className="w-4 h-4 text-blue-400 mt-0.5 shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

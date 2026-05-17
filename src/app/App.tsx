@@ -1,20 +1,24 @@
-import { useState, useEffect } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
-import HeroSection from './components/HeroSection';
-import AboutSection from './components/AboutSection';
-import HobbiesSection from './components/HobbiesSection';
-import WorkSection from './components/WorkSection';
-import EducationSection from './components/EducationSection';
-import ThankYouSection from './components/ThankYouSection';
+import { useState, useEffect } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
+import HeroSection from "./components/HeroSection";
+import AboutSection from "./components/AboutSection";
+import VgsSection from "./components/VgsSection";
+import WorkSection from "./components/WorkSection";
+import BachelorSection from "./components/BachelorSection";
+import WorkdaySection from "./components/WorkdaySection";
+import KongsbergSection from "./components/KongsbergSection";
+import ThankYouSection from "./components/ThankYouSection";
 
 const sections = [
   { id: 0, component: HeroSection },
   { id: 1, component: AboutSection },
-  { id: 2, component: HobbiesSection },
+  { id: 2, component: VgsSection },
   { id: 3, component: WorkSection },
-  { id: 4, component: EducationSection },
-  { id: 5, component: ThankYouSection }
+  { id: 4, component: BachelorSection },
+  { id: 5, component: WorkdaySection },
+  { id: 6, component: KongsbergSection },
+  { id: 7, component: ThankYouSection },
 ];
 
 export default function App() {
@@ -28,17 +32,35 @@ export default function App() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+      if (e.key === "ArrowDown" || e.key === "PageDown") {
         e.preventDefault();
         scrollToSection(currentSection + 1);
-      } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      } else if (e.key === "ArrowUp" || e.key === "PageUp") {
         e.preventDefault();
         scrollToSection(currentSection - 1);
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [currentSection]);
+
+  useEffect(() => {
+    let lastScroll = 0;
+    const handleWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      const now = Date.now();
+      if (now - lastScroll < 800) return;
+      lastScroll = now;
+      if (e.deltaY > 0) {
+        scrollToSection(currentSection + 1);
+      } else {
+        scrollToSection(currentSection - 1);
+      }
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: false });
+    return () => window.removeEventListener("wheel", handleWheel);
   }, [currentSection]);
 
   const CurrentComponent = sections[currentSection].component;
@@ -66,8 +88,8 @@ export default function App() {
             onClick={() => scrollToSection(section.id)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               currentSection === section.id
-                ? 'bg-white scale-125'
-                : 'bg-white/40 hover:bg-white/60'
+                ? "bg-white scale-125"
+                : "bg-white/40 hover:bg-white/60"
             }`}
             aria-label={`Go to section ${section.id + 1}`}
           />
@@ -88,7 +110,7 @@ export default function App() {
       {currentSection < sections.length - 1 && (
         <button
           onClick={() => scrollToSection(currentSection + 1)}
-          className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors backdrop-blur-sm animate-bounce"
+          className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors backdrop-blur-sm"
           aria-label="Next section"
         >
           <ChevronDown className="w-6 h-6 text-white" />

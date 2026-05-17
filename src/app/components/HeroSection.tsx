@@ -29,35 +29,20 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-3xl text-blue-200 mb-12"
+          className="text-3xl text-blue-200 mb-6"
         >
-          Data Ingeniør | ITSM System Administrator
+          Dataingeniørstudent ved OsloMet
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="space-y-4"
+          className="text-xl text-white/70 italic"
         >
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Passionate professional dedicated to excellence and innovation
-          </p>
-          <p className="text-lg text-white/70">
-            Let me share my journey with you
-          </p>
-        </motion.div>
+          Nysgjerrig, løsningorientert og alltid klar for en utfordring
+        </motion.p>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 1.2 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2"
-      >
-        <ChevronDown className="w-8 h-8 text-white/60 animate-bounce" />
-      </motion.div>
     </div>
   );
 }
