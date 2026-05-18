@@ -3,33 +3,42 @@ import { Building2, ChevronRight } from "lucide-react";
 
 const roles = [
   {
-    title: "IT Supporttekniker",
-    period: "20XX – 20XX",
-    focus: "Brukerstøtte og infrastruktur",
+    title: "Opplæring",
+    period: "",
+    focus: "",
     learned: [
-      "Praktisk feilsøking i et produksjonsmiljø",
-      "Forsto viktigheten av god dokumentasjon",
-      "Ble kjent med ITSM-prosesser fra brukersiden",
+      "Grunnleggende programmering",
+      "React (JavaScript/TypeScript)",
+      "REST API-er og integrasjoner",
     ],
   },
   {
-    title: "ITSM Systemadministrator",
-    period: "20XX – 20XX",
-    focus: "Administrasjon av ITSM-plattform",
+    title: "Geminor",
+    period: "",
+    focus: "",
     learned: [
-      "Konfigurerte og vedlikeholdt ITSM-løsninger",
-      "Automatiserte manuelle prosesser",
-      "Samarbeidet med ulike avdelinger om behov og forbedringer",
+      "Jobbet i et team med erfarne utviklere",
+      "Kundedialog og utvikling basert på behov",
+      "Første erfaring med et større kodebase og produksjonssystemer",
     ],
   },
   {
-    title: "[Rolle 3 — fyll inn]",
-    period: "20XX – nå",
-    focus: "Ansvar og utvikling",
+    title: "Fagprøve",
+    period: "",
+    focus: "",
     learned: [
+      "Utviklet en fullstendig applikasjon fra start",
       "Tok mer ansvar og jobbet mer selvstendig",
-      "Kombinerte studie og jobb i praksis",
-      "Lærte å jobbe strukturert med komplekse systemer",
+      "Time management og prioritering",
+    ],
+  },
+  {
+    title: "Arribatec Hospitality",
+    period: "",
+    focus: "",
+    learned: [
+      "Fullstack-utvikling i et profesjonelt miljø",
+      "Mer avanserte teknologier og systemer",
     ],
   },
 ];
@@ -48,7 +57,6 @@ export default function WorkSection() {
             <Building2 className="w-8 h-8 text-blue-400" />
             <h2 className="text-6xl font-bold text-white">Arribatec</h2>
           </div>
-          <p className="text-gray-400 text-xl">Tre roller — én arbeidsgiver</p>
         </motion.div>
 
         {/* Timeline */}

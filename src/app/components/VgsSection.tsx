@@ -2,11 +2,12 @@ import { motion } from "motion/react";
 import { School, Wrench } from "lucide-react";
 
 const subjects = [
+  "Automasjon",
+  "Scripting",
   "Nettverk og infrastruktur",
   "Hardware, montering og feilsøking",
-  "Installasjon og konfigurasjon av OS og programvare",
-  "Kundestøtte og brukerveiledning",
-  "IT-sikkerhet og drift",
+  "Installasjon og konfigurasjon av OS (Windows og Linux)",
+  "Mikrokontrollere og elektronikk",
   "Praktisk IT-arbeid i bedrift (lærlingtid)",
 ];
 
@@ -38,16 +39,14 @@ export default function VgsSection() {
                   <School className="w-6 h-6 text-cyan-300" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">
-                    Informasjonsteknologi og medieproduksjon
-                  </h3>
+                  <h3 className="text-xl font-bold text-white">Elektro</h3>
                   <p className="text-cyan-400 text-sm">
-                    Vg1 — Videregående skole
+                    Vg1 - Videregående skole
                   </p>
                 </div>
               </div>
               <p className="text-white/50 text-sm">
-                Grunnlag i IT og digital teknologi
+                Introduksjon til elektronikk og teknologi
               </p>
             </motion.div>
 
@@ -63,15 +62,15 @@ export default function VgsSection() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white">
-                    IT-servicefag
+                    Dataelektroniker
                   </h3>
                   <p className="text-cyan-400 text-sm">
-                    Vg2 — Videregående skole
+                    Vg2 + Vg3 - Videregående skole
                   </p>
                 </div>
               </div>
               <p className="text-white/50 text-sm">
-                Fordypning i drift og support
+                Nettverk, operativsystemer og programvare
               </p>
             </motion.div>
 
@@ -87,15 +86,15 @@ export default function VgsSection() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white">
-                    Fagbrev — IT-servicefaget
+                    Fagbrev — Dataelektroniker
                   </h3>
                   <p className="text-green-400 text-sm">
-                    Lærling + fagprøve · 2022
+                    Lærlingtid + fagprøve · 2021/2022
                   </p>
                 </div>
               </div>
               <p className="text-white/50 text-sm">
-                Fullført med bestått fagprøve
+                Fullført med bestått fagprøve, med fokus på utvikling
               </p>
             </motion.div>
           </div>

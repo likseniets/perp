@@ -15,8 +15,8 @@ const preferences = [
     icon: Layers,
     title: "Ideell arbeidsdag",
     points: [
-      "Variasjon — ikke det samme om og om igjen",
-      "Mulighet til å gå i dybden når det trengs",
+      "Variasjon - ikke det samme om og om igjen",
+      "Alltid nye utfordringer og ting å lære",
       "Klare mål, men frihet til å løse dem selv",
     ],
   },

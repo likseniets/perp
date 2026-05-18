@@ -6,9 +6,8 @@ const reasons = [
     icon: Target,
     title: "Rollen passer meg",
     points: [
-      "Kombinerer det tekniske jeg kan med det jeg vil lære mer av",
+      "Kombinerer det tekniske jeg kan med noe jeg vil lære mer av",
       "Variasjon mellom systemer, folk og problemstillinger",
-      "Passe stor organisasjon — ikke for anonym, ikke for liten",
     ],
   },
   {
@@ -24,8 +23,8 @@ const reasons = [
     icon: Rocket,
     title: "Hva jeg kan bidra med",
     points: [
-      "Praktisk erfaring fra Arribatec — skjønner IT i en organisasjonskontekst",
-      "Frisk blikk fra studiene — oppdatert på ny teknologi og metoder",
+      "Praktisk erfaring fra Arribatec kombinert med bredere teknisk kompetanse fra utdanning",
+      "Ett fint smil og en positiv innstilling",
       "Motivert og klar for å ta ansvar fra dag én",
     ],
   },
@@ -44,7 +43,6 @@ export default function KongsbergSection() {
           <h2 className="text-6xl font-bold text-white mb-2">
             Hvorfor Kongsberg IT?
           </h2>
-          <p className="text-orange-300 text-xl">Kort og konkret</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">

@@ -15,25 +15,6 @@ export default function ThankYouSection() {
           Takk!
         </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-2xl text-blue-200 mb-4"
-        >
-          Spørsmål, innspill eller bare en god prat?
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex items-center justify-center gap-2 text-white/50 mb-12"
-        >
-          <MessageCircle className="w-5 h-5" />
-          <span className="text-lg">Jeg tar gjerne spørsmål</span>
-        </motion.div>
-
         {/* Contact Links */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -46,14 +27,7 @@ export default function ThankYouSection() {
             className="flex items-center gap-3 px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full text-white transition-all duration-300 border border-white/10"
           >
             <Mail className="w-5 h-5" />
-            <span>din@epost.no</span>
-          </a>
-          <a
-            href="https://linkedin.com/in/dinprofil"
-            className="flex items-center gap-3 px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full text-white transition-all duration-300 border border-white/10"
-          >
-            <Linkedin className="w-5 h-5" />
-            <span>linkedin.com/in/dinprofil</span>
+            <span>steineskil@gmail.com</span>
           </a>
           <a
             href="https://github.com/likseniets"

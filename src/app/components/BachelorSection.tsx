@@ -2,13 +2,14 @@ import { motion } from "motion/react";
 import { GraduationCap, BookOpen, FolderGit2 } from "lucide-react";
 
 const subjects = [
+  "Matematikk",
+  "Algoritmer og datastrukturer",
   "Programmering (Python, Java, C)",
-  "Databaser og datamodellering (SQL, NoSQL)",
+  "Databaser",
   "Systemarkitektur og design",
-  "Nettverkssikkerhet og kryptografi",
-  "Skyteknologi og DevOps",
+  "Nettverkssikkerhet",
+  "Sky løsninger",
   "Smidig metodikk (Scrum/Kanban)",
-  "Matematikk og algoritmer",
 ];
 
 const projects = [
@@ -23,9 +24,10 @@ const projects = [
     tags: ["Python", "SQL"],
   },
   {
-    title: "[Bacheloroppgave — fyll inn]",
-    description: "Tema og kort om hva dere løste",
-    tags: ["Gruppe", "2026"],
+    title: "Bacheloroppgave",
+    description:
+      "Prosjekt i samarbeid med Innsikt.ai, med fokus på en chatbot for foresatte til å bli bedre på samtaler med sine barn",
+    tags: ["React Native", "FastAPI", "PostgreSQL", "OpenAI API"],
   },
 ];
 

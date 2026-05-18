@@ -88,23 +88,25 @@ export default function AboutSection() {
         >
           <div>
             <h2 className="text-5xl font-bold text-white mb-2">Hvem er jeg?</h2>
-            <p className="text-blue-300 text-lg mb-6">Ikke en CV — en person</p>
             <ul className="space-y-3 text-xl text-blue-100">
               <li className="flex items-center gap-3">
-                <span className="text-blue-300 text-2xl">→</span>Datatekniker &
-                ITSM-systemadministrator
+                <span className="text-blue-300 text-2xl">→</span>Utvikler
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-blue-300 text-2xl">→</span>Liker å forstå{" "}
-                <em>hvorfor</em> — ikke bare fikse
+                <span className="text-blue-300 text-2xl">→</span>Liker å forstå
+                <em>hvorfor,</em> ikke bare fikse
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="text-blue-300 text-2xl">→</span>Elsker å sette
+                meg inn i komplekse systemer
               </li>
               <li className="flex items-center gap-3">
                 <span className="text-blue-300 text-2xl">→</span>Trives både i
                 team og selvstendig
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-blue-300 text-2xl">→</span>Alltid et
-                prosjekt på gang
+                <span className="text-blue-300 text-2xl">→</span>Alltid glad i å
+                lære nye ting
               </li>
             </ul>
           </div>
@@ -115,15 +117,13 @@ export default function AboutSection() {
             </h3>
             <ul className="space-y-2 text-blue-100">
               <li className="flex items-center gap-2">
-                <span className="text-blue-300">→</span>Honda VFR800 —
-                motorsykkel
+                <span className="text-blue-300">→</span>Gaming
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-blue-300">→</span>Friluftsliv & natur
+                <span className="text-blue-300">→</span>Musikk
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-blue-300">→</span>Hobbyprosjekter, gjerne
-                tech-relatert
+                <span className="text-blue-300">→</span>Hobbyprosjekter
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-blue-300">→</span>Alltid noe nytt å lære
@@ -139,12 +139,9 @@ export default function AboutSection() {
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-blue-300" />
-              <span>din@epost.no</span>
+              <span>steineskil@gmail.com</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Linkedin className="w-4 h-4 text-blue-300" />
-              <span>linkedin.com/in/dinprofil</span>
-            </div>
+            <div className="flex items-center gap-2"></div>
           </div>
         </motion.div>
       </div>
