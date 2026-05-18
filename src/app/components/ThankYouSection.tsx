@@ -5,12 +5,12 @@ export default function ThankYouSection() {
   return (
     <div className="relative h-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       {/* Content */}
-      <div className="relative z-10 text-center px-8 max-w-3xl">
+      <div className="relative z-10 text-center px-4 sm:px-8 max-w-3xl">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-7xl font-bold text-white mb-4"
+          className="text-5xl sm:text-7xl font-bold text-white mb-4"
         >
           Takk!
         </motion.h1>

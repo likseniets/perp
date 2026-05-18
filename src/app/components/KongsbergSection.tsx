@@ -32,15 +32,15 @@ const reasons = [
 
 export default function KongsbergSection() {
   return (
-    <div className="h-full flex items-center justify-center bg-gradient-to-br from-slate-900 via-orange-950 to-slate-900 px-8">
+    <div className="h-full flex items-center justify-center bg-gradient-to-br from-slate-900 via-orange-950 to-slate-900 px-4 sm:px-8 py-8">
       <div className="max-w-5xl w-full">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-6 sm:mb-12"
         >
-          <h2 className="text-6xl font-bold text-white mb-2">
+          <h2 className="text-3xl sm:text-6xl font-bold text-white mb-2">
             Hvorfor Kongsberg IT?
           </h2>
         </motion.div>
@@ -54,7 +54,7 @@ export default function KongsbergSection() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-orange-500/20 rounded-lg">

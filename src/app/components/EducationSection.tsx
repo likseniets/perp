@@ -32,16 +32,18 @@ const education = [
 
 export default function EducationSection() {
   return (
-    <div className="h-full flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 px-8">
+    <div className="h-full flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 px-4 sm:px-8 py-8">
       <div className="max-w-5xl w-full">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-6 sm:mb-12"
         >
-          <h2 className="text-6xl font-bold text-white mb-2">Utdanning</h2>
-          <p className="text-purple-300 text-xl">
+          <h2 className="text-3xl sm:text-6xl font-bold text-white mb-2">
+            Utdanning
+          </h2>
+          <p className="text-purple-300 text-base sm:text-xl">
             Fagbrev + bachelor — teori møter praksis
           </p>
         </motion.div>
@@ -55,7 +57,7 @@ export default function EducationSection() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-8 border border-white/10"
               >
                 <div
                   className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${edu.color} mb-6`}

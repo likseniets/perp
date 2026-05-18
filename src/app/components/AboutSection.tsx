@@ -34,8 +34,8 @@ const traits = [
 
 export default function AboutSection() {
   return (
-    <div className="h-full flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 px-8">
-      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div className="h-full flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 px-4 sm:px-8 py-8">
+      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 items-center">
         {/* Left: Profile Image */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -47,7 +47,7 @@ export default function AboutSection() {
             <img
               src="/suuubway.jpg"
               alt="Profilbilde"
-              className="w-full h-[500px] object-cover"
+              className="w-full h-48 sm:h-[500px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent" />
           </div>
@@ -87,8 +87,10 @@ export default function AboutSection() {
           className="space-y-8"
         >
           <div>
-            <h2 className="text-5xl font-bold text-white mb-2">Hvem er jeg?</h2>
-            <ul className="space-y-3 text-xl text-blue-100">
+            <h2 className="text-3xl sm:text-5xl font-bold text-white mb-2">
+              Hvem er jeg?
+            </h2>
+            <ul className="space-y-3 text-base sm:text-xl text-blue-100">
               <li className="flex items-center gap-3">
                 <span className="text-blue-300 text-2xl">→</span>Utvikler
               </li>

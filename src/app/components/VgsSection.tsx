@@ -13,16 +13,20 @@ const subjects = [
 
 export default function VgsSection() {
   return (
-    <div className="h-full flex items-center justify-center bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900 px-8">
+    <div className="h-full flex items-center justify-center bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900 px-4 sm:px-8 py-8">
       <div className="max-w-5xl w-full">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-6 sm:mb-12"
         >
-          <h2 className="text-6xl font-bold text-white mb-2">Videregående</h2>
-          <p className="text-cyan-300 text-xl">Starten på IT-karrieren</p>
+          <h2 className="text-3xl sm:text-6xl font-bold text-white mb-2">
+            Videregående
+          </h2>
+          <p className="text-cyan-300 text-base sm:text-xl">
+            Starten på IT-karrieren
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 items-start">

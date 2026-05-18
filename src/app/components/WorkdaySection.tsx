@@ -42,18 +42,20 @@ const preferences = [
 
 export default function WorkdaySection() {
   return (
-    <div className="h-full flex items-center justify-center bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900 px-8">
+    <div className="h-full flex items-center justify-center bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900 px-4 sm:px-8 py-8">
       <div className="max-w-5xl w-full">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-6 sm:mb-12"
         >
-          <h2 className="text-6xl font-bold text-white mb-2">
+          <h2 className="text-3xl sm:text-6xl font-bold text-white mb-2">
             Hva jeg ser etter
           </h2>
-          <p className="text-teal-300 text-xl">I en god arbeidshverdag</p>
+          <p className="text-teal-300 text-base sm:text-xl">
+            I en god arbeidshverdag
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -65,7 +67,7 @@ export default function WorkdaySection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.12 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-teal-500/20 rounded-lg">

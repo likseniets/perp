@@ -14,19 +14,21 @@ const subjects = [
 
 export default function BachelorSection() {
   return (
-    <div className="h-full flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 px-8">
+    <div className="h-full flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 px-4 sm:px-8 py-8">
       <div className="max-w-6xl w-full">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-10"
+          className="mb-5 sm:mb-10"
         >
           <div className="flex items-center gap-3 mb-2">
             <GraduationCap className="w-8 h-8 text-purple-300" />
-            <h2 className="text-6xl font-bold text-white">OsloMet</h2>
+            <h2 className="text-3xl sm:text-6xl font-bold text-white">
+              OsloMet
+            </h2>
           </div>
-          <p className="text-purple-300 text-xl">
+          <p className="text-purple-300 text-base sm:text-xl">
             Bachelor — Dataingeniør · 2022–2026
           </p>
         </motion.div>
