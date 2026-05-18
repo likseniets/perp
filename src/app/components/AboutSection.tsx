@@ -45,7 +45,7 @@ export default function AboutSection() {
         >
           <div className="relative rounded-2xl overflow-hidden shadow-2xl">
             <img
-              src="/suuubway.jpg"
+              src={`${import.meta.env.BASE_URL}suuubway.jpg`}
               alt="Profilbilde"
               className="w-full h-[500px] object-cover"
             />
