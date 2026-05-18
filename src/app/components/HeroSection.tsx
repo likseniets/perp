@@ -7,7 +7,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={`${import.meta.env.BASE_URL}profile.jpg`}
+          src="/profile.jpg"
           alt="Professional background"
           className="w-full h-full object-cover object-top"
         />
