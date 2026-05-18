@@ -1,0 +1,4 @@
+html {
+  /* Fluid root font-size: scales smoothly from 720p → 1080p → 4K */
+  font-size: clamp(13px, 0.833vw, 30px);
+}
