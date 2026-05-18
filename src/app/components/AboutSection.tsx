@@ -47,7 +47,7 @@ export default function AboutSection() {
             <img
               src="/suuubway.jpg"
               alt="Profilbilde"
-              className="w-full h-48 sm:h-[500px] object-cover"
+              className="w-full h-48 sm:h-[350px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent" />
           </div>

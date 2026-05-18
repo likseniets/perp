@@ -4,8 +4,6 @@ import { Building2, ChevronRight } from "lucide-react";
 const roles = [
   {
     title: "Opplæring",
-    period: "",
-    focus: "",
     learned: [
       "Grunnleggende programmering",
       "React (JavaScript/TypeScript)",
@@ -14,8 +12,6 @@ const roles = [
   },
   {
     title: "Geminor",
-    period: "",
-    focus: "",
     learned: [
       "Jobbet i et team med erfarne utviklere",
       "Kundedialog og utvikling basert på behov",
@@ -24,8 +20,6 @@ const roles = [
   },
   {
     title: "Fagprøve",
-    period: "",
-    focus: "",
     learned: [
       "Utviklet en fullstendig applikasjon fra start",
       "Tok mer ansvar og jobbet mer selvstendig",
@@ -34,8 +28,6 @@ const roles = [
   },
   {
     title: "Arribatec Hospitality",
-    period: "",
-    focus: "",
     learned: [
       "Fullstack-utvikling i et profesjonelt miljø",
       "Mer avanserte teknologier og systemer",
@@ -51,64 +43,54 @@ export default function WorkSection() {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-6 sm:mb-12"
+          className="mb-4 sm:mb-8"
         >
-          <div className="flex items-center gap-3 mb-2">
+          <div className="flex items-center gap-3 mb-1">
             <Building2 className="w-8 h-8 text-blue-400" />
             <h2 className="text-4xl sm:text-6xl font-bold text-white">
               Arribatec
             </h2>
           </div>
+          <p className="text-blue-400 text-sm sm:text-base ml-1">
+            Lærlingtid · 2020–2022
+          </p>
         </motion.div>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-4 sm:left-5 top-0 bottom-0 w-px bg-white/10" />
-
-          <div className="space-y-8">
-            {roles.map((role, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="relative flex gap-4 sm:gap-8"
-              >
-                {/* Dot */}
-                <div className="shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-500/30 border-2 border-blue-400 flex items-center justify-center z-10">
-                  <span className="text-blue-300 font-bold text-sm">
+        {/* 2x2 grid with progression arrows */}
+        <div className="grid grid-cols-2 gap-3 sm:gap-5">
+          {roles.map((role, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.12 }}
+              className="relative bg-white/5 backdrop-blur-sm rounded-xl p-3 sm:p-5 border border-white/10"
+            >
+              {/* Step number + title */}
+              <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                <div className="shrink-0 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-blue-500/30 border-2 border-blue-400 flex items-center justify-center">
+                  <span className="text-blue-300 font-bold text-xs sm:text-sm">
                     {index + 1}
                   </span>
                 </div>
+                <h3 className="text-sm sm:text-lg font-bold text-white">
+                  {role.title}
+                </h3>
+              </div>
 
-                {/* Card */}
-                <div className="flex-1 bg-white/5 backdrop-blur-sm rounded-xl p-3 sm:p-6 border border-white/10">
-                  <div className="flex items-start justify-between mb-1">
-                    <h3 className="text-base sm:text-xl font-bold text-white">
-                      {role.title}
-                    </h3>
-                    <span className="text-gray-500 text-sm shrink-0 ml-4">
-                      {role.period}
-                    </span>
-                  </div>
-                  <p className="text-blue-300 text-sm mb-4">{role.focus}</p>
-
-                  <ul className="space-y-1">
-                    {role.learned.map((item, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 text-gray-300 text-sm"
-                      >
-                        <ChevronRight className="w-4 h-4 text-blue-400 mt-0.5 shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+              <ul className="space-y-1">
+                {role.learned.map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-1.5 text-gray-300 text-xs sm:text-sm"
+                  >
+                    <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400 mt-0.5 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>
