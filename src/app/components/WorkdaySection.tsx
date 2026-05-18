@@ -17,7 +17,7 @@ const preferences = [
     points: [
       "Variasjon - ikke det samme om og om igjen",
       "Alltid nye utfordringer og ting å lære",
-      "Klare mål, men frihet til å løse dem selv",
+      "Hyggelige kollegaer og godt miljø",
     ],
   },
   {
@@ -26,7 +26,7 @@ const preferences = [
     points: [
       "Trives godt i begge deler",
       "Foretrekker team der man kan diskutere og sparke idéer",
-      "Kan jobbe selvstendig uten å bli fulgt opp hele tiden",
+      "Trives med å jobbe selvstendig i perioder",
     ],
   },
   {

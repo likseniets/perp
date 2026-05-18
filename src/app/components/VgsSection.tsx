@@ -5,8 +5,7 @@ const subjects = [
   "Automasjon",
   "Scripting",
   "Nettverk og infrastruktur",
-  "Hardware, montering og feilsøking",
-  "Installasjon og konfigurasjon av OS (Windows og Linux)",
+  "Windows og Linux administrasjon",
   "Mikrokontrollere og elektronikk",
   "Praktisk IT-arbeid i bedrift (lærlingtid)",
 ];
@@ -90,10 +89,10 @@ export default function VgsSection() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white">
-                    Fagbrev — Dataelektroniker
+                    Fagbrev - Dataelektroniker
                   </h3>
                   <p className="text-green-400 text-sm">
-                    Lærlingtid + fagprøve · 2021/2022
+                    Lærlingtid + fagprøve · 2020-2022
                   </p>
                 </div>
               </div>

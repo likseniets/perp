@@ -29,7 +29,7 @@ export default function BachelorSection() {
             </h2>
           </div>
           <p className="text-purple-300 text-base sm:text-xl">
-            Bachelor — Dataingeniør · 2022–2026
+            Bachelor - Dataingeniør · 2022-2026
           </p>
         </motion.div>
 
@@ -83,7 +83,7 @@ export default function BachelorSection() {
             <div className="flex items-start gap-3">
               <Users className="w-4 h-4 text-purple-400 mt-0.5 shrink-0" />
               <p className="text-purple-200 text-sm">
-                Gruppeprosjekt på 5 personer — fra idé til ferdig produkt med
+                Gruppeprosjekt på 5 personer - fra idé til ferdig produkt med
                 brukertester, design og implementasjon.
               </p>
             </div>

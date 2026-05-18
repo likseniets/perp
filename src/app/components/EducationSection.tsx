@@ -6,7 +6,7 @@ const education = [
     icon: Wrench,
     degree: "Fagbrev — IT-servicefag",
     institution: "Videregående skole",
-    period: "2018 – 2022",
+    period: "2018 - 2022",
     color: "from-blue-500 to-cyan-500",
     learned: [
       "Nettverk og infrastruktur",
@@ -19,7 +19,7 @@ const education = [
     icon: GraduationCap,
     degree: "Bachelor — Dataingeniør",
     institution: "OsloMet",
-    period: "2022 – 2026",
+    period: "2022 - 2026",
     color: "from-indigo-500 to-purple-500",
     learned: [
       "Programmering, databaser og systemarkitektur",

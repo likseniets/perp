@@ -52,7 +52,7 @@ export default function WorkSection() {
             </h2>
           </div>
           <p className="text-blue-400 text-sm sm:text-base ml-1">
-            Lærlingtid · 2020–2022
+            Lærlingtid · 2020-2022
           </p>
         </motion.div>
 
