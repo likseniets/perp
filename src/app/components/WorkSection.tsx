@@ -45,24 +45,26 @@ const roles = [
 
 export default function WorkSection() {
   return (
-    <div className="h-full flex items-center justify-center bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 px-8">
+    <div className="h-full flex items-center justify-center bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 px-4 sm:px-8 py-8">
       <div className="max-w-5xl w-full">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-6 sm:mb-12"
         >
           <div className="flex items-center gap-3 mb-2">
             <Building2 className="w-8 h-8 text-blue-400" />
-            <h2 className="text-6xl font-bold text-white">Arribatec</h2>
+            <h2 className="text-4xl sm:text-6xl font-bold text-white">
+              Arribatec
+            </h2>
           </div>
         </motion.div>
 
         {/* Timeline */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-5 top-0 bottom-0 w-px bg-white/10" />
+          <div className="absolute left-4 sm:left-5 top-0 bottom-0 w-px bg-white/10" />
 
           <div className="space-y-8">
             {roles.map((role, index) => (
@@ -71,19 +73,19 @@ export default function WorkSection() {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="relative flex gap-8"
+                className="relative flex gap-4 sm:gap-8"
               >
                 {/* Dot */}
-                <div className="shrink-0 w-10 h-10 rounded-full bg-blue-500/30 border-2 border-blue-400 flex items-center justify-center z-10">
+                <div className="shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-500/30 border-2 border-blue-400 flex items-center justify-center z-10">
                   <span className="text-blue-300 font-bold text-sm">
                     {index + 1}
                   </span>
                 </div>
 
                 {/* Card */}
-                <div className="flex-1 bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                <div className="flex-1 bg-white/5 backdrop-blur-sm rounded-xl p-3 sm:p-6 border border-white/10">
                   <div className="flex items-start justify-between mb-1">
-                    <h3 className="text-xl font-bold text-white">
+                    <h3 className="text-base sm:text-xl font-bold text-white">
                       {role.title}
                     </h3>
                     <span className="text-gray-500 text-sm shrink-0 ml-4">

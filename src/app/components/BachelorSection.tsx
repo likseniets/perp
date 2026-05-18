@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { GraduationCap, BookOpen, FolderGit2 } from "lucide-react";
+import { GraduationCap, BookOpen, FileText, Users, Cpu } from "lucide-react";
 
 const subjects = [
   "Matematikk",
@@ -9,26 +9,7 @@ const subjects = [
   "Systemarkitektur og design",
   "Nettverkssikkerhet",
   "Sky løsninger",
-  "Smidig metodikk (Scrum/Kanban)",
-];
-
-const projects = [
-  {
-    title: "[Prosjekt 1 — fyll inn]",
-    description: "Kort beskrivelse av prosjektet og teknologiene brukt",
-    tags: ["React", "Node.js"],
-  },
-  {
-    title: "[Prosjekt 2 — fyll inn]",
-    description: "Kort beskrivelse av prosjektet og teknologiene brukt",
-    tags: ["Python", "SQL"],
-  },
-  {
-    title: "Bacheloroppgave",
-    description:
-      "Prosjekt i samarbeid med Innsikt.ai, med fokus på en chatbot for foresatte til å bli bedre på samtaler med sine barn",
-    tags: ["React Native", "FastAPI", "PostgreSQL", "OpenAI API"],
-  },
+  "Smidig metodikk (Scrum)",
 ];
 
 export default function BachelorSection() {
@@ -78,43 +59,52 @@ export default function BachelorSection() {
             </ul>
           </motion.div>
 
-          {/* Right: Projects */}
+          {/* Right: Bachelor thesis */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="space-y-4"
+            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 flex flex-col gap-5"
           >
-            <div className="flex items-center gap-2 mb-1">
-              <FolderGit2 className="w-5 h-5 text-purple-300" />
-              <p className="text-white font-semibold">Prosjekter</p>
+            <div className="flex items-center gap-2">
+              <FileText className="w-5 h-5 text-purple-300" />
+              <p className="text-white font-semibold">Bacheloroppgave</p>
             </div>
-            {projects.map((project, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.25 + i * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/10"
-              >
-                <h3 className="text-white font-semibold mb-1">
-                  {project.title}
-                </h3>
-                <p className="text-purple-200 text-sm mb-3">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-0.5 bg-purple-500/20 text-purple-300 rounded text-xs border border-purple-400/20"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+
+            <p className="text-purple-200 text-sm leading-relaxed">
+              Prosjekt i samarbeid med{" "}
+              <span className="text-purple-300 font-medium">Innsikt.ai</span>,
+              med fokus på en chatbot som hjelper foresatte til å bli bedre på
+              samtaler med sine barn.
+            </p>
+
+            <div className="flex items-start gap-3">
+              <Users className="w-4 h-4 text-purple-400 mt-0.5 shrink-0" />
+              <p className="text-purple-200 text-sm">
+                Gruppeprosjekt på 5 personer — fra idé til ferdig produkt med
+                brukertester, design og implementasjon.
+              </p>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <Cpu className="w-4 h-4 text-purple-400 mt-0.5 shrink-0" />
+              <p className="text-purple-200 text-sm">
+                AI-drevet samtaleassistent med konstruktiv tilbakemelding.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-2 pt-1">
+              {["React Native", "FastAPI", "PostgreSQL", "OpenAI API"].map(
+                (tag) => (
+                  <span
+                    key={tag}
+                    className="px-2 py-0.5 bg-purple-500/20 text-purple-300 rounded text-xs border border-purple-400/20"
+                  >
+                    {tag}
+                  </span>
+                ),
+              )}
+            </div>
           </motion.div>
         </div>
       </div>
